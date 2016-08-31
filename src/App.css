@@ -1,0 +1,43 @@
+.App-header {
+  background-color: #0F76AC;
+  height: 50px;
+  padding: 20px;
+  color: white;
+  text-align: center;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.App-search-bar {
+  text-align: center;
+  marign: 0 auto;
+  margin: 25px 0;
+}
+
+.App-search-bar input {
+  width: 245px;
+  font-size: medium;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #666;
+}
+
+.App-repo-list {
+  width: 30%;
+  margin: 0 auto;
+  list-style: none;
+}
+
+.App-repo-list-item {
+  margin-bottom: 20px;
+}
+
+.App-no-results {
+  text-align: center;
+}
+
+.App-repo-list-item--details {
+  list-style: none;
+}
