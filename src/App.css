@@ -25,7 +25,8 @@
 }
 
 .App-repo-list {
-  width: 30%;
+  width: 340px;
+  padding: 0;
   margin: 0 auto;
   list-style: none;
 }

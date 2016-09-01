@@ -16,7 +16,7 @@ class App extends Component {
     });
   }
 
-  search(name) {
+  search = (name) => {
     const fillteredList = this.state.originalList.filter(repo => {
       return repo.name.toLowerCase().includes(name.toLowerCase());
     });
@@ -29,7 +29,7 @@ class App extends Component {
         <div className="App-header">
           <h2>7Geese Github Repos</h2>
         </div>
-        <SearchBar onSearch={name => this.search(name)} />
+        <SearchBar onSearch={this.search} />
         <RepoList repos={this.state.repos} />
       </div>
     );
