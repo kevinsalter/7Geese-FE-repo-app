@@ -22,7 +22,7 @@ class SearchBar extends Component {
         <input
           value={this.state.name}
           onChange={this.handleInputChange}
-          placeholder="search"
+          placeholder="search by repository name"
         />
       </div>
     );

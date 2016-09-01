@@ -6,12 +6,16 @@ import './App.css';
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {repos: [], originalList: []};
+    this.state = {
+      repos: [],
+      originalList: [],
+    };
+  }
 
+  componentDidMount() {
     fetch('https://api.github.com/orgs/7geese/repos').then(response => {
       return response.json().then(json => {
         this.setState({repos: json, originalList: json});
-        return json;
       });
     });
   }
