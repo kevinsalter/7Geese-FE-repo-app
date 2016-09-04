@@ -1,22 +1,12 @@
 import React, {PropTypes} from 'react';
+import normalizeName from './utils/normalize-name.js';
 
 const RepoItem = props => {
-  const normalizeNames = name => {
-    const words = name.split('-');
-    const titleCasedWords = words.map(word => {
-      if (word !== 'as' && word !== 'on') {
-        word = `${word.charAt(0).toUpperCase()}${word.slice(1)}`;
-      }
-      return word;
-    })
-    return titleCasedWords.join(' ');
-  }
-
   return (
     <li className="App-repo-list-item">
       <ul className="App-repo-list-item--details">
         <li>
-          <strong>Name:</strong> {normalizeNames(props.repo.name)}
+          <strong>Name:</strong> {normalizeName(props.repo.name)}
         </li>
         <li>
           <strong>Fork count:</strong> {props.repo.forks}

@@ -20,10 +20,16 @@ class App extends Component {
     });
   }
 
-  search = (name) => {
+  getFilteredList(name) {
     const fillteredList = this.state.originalList.filter(repo => {
       return repo.name.toLowerCase().includes(name.toLowerCase());
     });
+
+    return fillteredList;
+  }
+
+  search = (name) => {
+    const fillteredList = this.getFilteredList(name)
     this.setState({repos: fillteredList});
   }
 
