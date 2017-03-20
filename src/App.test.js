@@ -1,6 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import {shallow} from 'enzyme';
+import { shallow } from 'enzyme';
 import App from './App';
 
 
@@ -14,9 +13,9 @@ const ORIGINAL_REPO_LIST_FIXTURE = [
 
 describe('<App />', () => {
   it('renders without crashing', () => {
-    const div = document.createElement('div');
-    ReactDOM.render(<App />, div);
-  });
+      const wrapper = shallow(<App />);
+      expect(wrapper.length).toBe(1);
+    });
 
   it('should return the correct repo name when state.originalList is filtered by name', () => {
       const wrapper = shallow(<App />);
